@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="card header-card">
+            <h1>Budget Tracker</h1>
+            <p class="subtitle">Track your spending. Stay in control.</p>
+            <div class="balance-summary">
+                <span>Total Spent:</span>
+                <strong>KES 12,500</strong>
+            </div>
+        </header>
+
+        <section class="card form-card">
+            <h2>Add New Expense</h2>
+            <form>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Description</label>
+                        <input type="text" placeholder="e.g., Groceries">
+                    </div>
+                    <div class="form-group">
+                        <label>Category</label>
+                        <select><option>Food</option><option>Transport</option><option>Housing</option></select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Amount (KES)</label>
+                        <input type="number" placeholder="0.00">
+                    </div>
+                    <div class="form-group">
+                        <label>Date</label>
+                        <input type="date">
+                    </div>
+                </div>
+                <button class="btn-primary">Add Expense</button>
+            </form>
+        </section>
+
+        <section class="card table-card">
+            <h2>Expense History</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr><th>Date</th><th>Description</th><th>Category</th><th>Amount</th><th>Action</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>2026-05-10</td><td>Monthly Rent</td><td><span class="badge housing">Housing</span></td><td>KES 15,000</td><td><button class="btn-delete">Delete</button></td></tr>
+                        <tr><td>2026-05-11</td><td>Naivas Shopping</td><td><span class="badge food">Food</span></td><td>KES 2,350</td><td><button class="btn-delete">Delete</button></td></tr>
+                        <tr><td>2026-05-12</td><td>Matatu</td><td><span class="badge transport">Transport</span></td><td>KES 150</td><td><button class="btn-delete">Delete</button></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
